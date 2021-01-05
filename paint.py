@@ -188,9 +188,8 @@ class Paint(object):
                                width=self.line_width, fill=paint_color,
                                capstyle=ROUND, smooth=TRUE, splinesteps=36)
             draw = ImageDraw.Draw(self.IMAGE)
-            draw.line(((self.old_x, self.old_y), (event.x,event.y)), paint_color, width=self.DEFAULT_PEN_SIZE)
-            if self.color != '#000000':
-                self.CHANGED = True
+            draw.line(((self.old_x, self.old_y), (event.x,event.y)), 'white', width=self.DEFAULT_PEN_SIZE)
+            self.CHANGED = True
         self.old_x = event.x
         self.old_y = event.y
 

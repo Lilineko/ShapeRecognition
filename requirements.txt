@@ -3,6 +3,8 @@ Image
 ImageDraw
 ImageTk
 scikit-image
+matplotlib
 numpy
 torch
 torchvition
+torchsummary

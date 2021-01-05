@@ -10,7 +10,7 @@ import torchvision as tv
 
 class Paint(object):
 
-    DEFAULT_PEN_SIZE = 4
+    DEFAULT_PEN_SIZE = 2
     DEFAULT_COLOR = 'white'
     BACKGROUND_COLOR = 'black'
     RESOLUTION = 600
@@ -24,7 +24,7 @@ class Paint(object):
     torch.nn.ReLU(),
     torch.nn.MaxPool2d(2),                      #  30 = 60 / 2
 
-    torch.nn.Conv2d(8, 16, 7),                  #  24 = 30 - (7- 1)
+    torch.nn.Conv2d(8, 16, 7),                  #  24 = 30 - (7 - 1)
     torch.nn.ReLU(),
     torch.nn.MaxPool2d(2),                      #  12 = 24 / 2
 

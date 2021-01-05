@@ -36,22 +36,23 @@ class Paint(object):
     torch.nn.Linear(12, 4)
     )
 
-    MODEL.load_state_dict(torch.load('./model/model.pth'))
+    MODEL.load_state_dict(torch.load('./model/model.pth', map_location=torch.device('cpu')))
 
     def __init__(self):
         self.root = Tk()
+        self.root.configure(bg='#3E4149')
         self.root.title("Shape Recognition (Piotr Wrzosek)")
 
-        self.pen_button = Button(self.root, text='capture', command=self.capture_image)
+        self.pen_button = Button(self.root, text='capture', command=self.capture_image, highlightbackground='#3E4149')
         self.pen_button.grid(row=0, column=0)
 
-        self.color_button = Button(self.root, text='color', command=self.choose_color)
+        self.color_button = Button(self.root, text='color', command=self.choose_color, highlightbackground='#3E4149')
         self.color_button.grid(row=0, column=1)
 
-        self.eraser_button = Button(self.root, text='clear', command=self.use_eraser)
+        self.eraser_button = Button(self.root, text='clear', command=self.use_eraser, highlightbackground='#3E4149')
         self.eraser_button.grid(row=0, column=2)
 
-        self.choose_size_button = Scale(self.root, from_=1, to=10, orient=HORIZONTAL)
+        self.choose_size_button = Scale(self.root, from_=1, to=10, orient=HORIZONTAL, bg='#3E4149', fg='#ececec')
         self.choose_size_button.grid(row=0, column=3)
 
         self.c = Canvas(self.root, bg=self.BACKGROUND_COLOR, width=self.RESOLUTION, height=self.RESOLUTION)

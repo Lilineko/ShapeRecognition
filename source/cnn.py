@@ -8,7 +8,7 @@ import random
 
 RESOLUTION = 64
 
-# 3 * 18600
+# 4 * 18600
 samples0, samples1 = 16000, 2600
 classes = 4
 class_names = ['circle', 'triangle', 'square', 'triangle_flip']

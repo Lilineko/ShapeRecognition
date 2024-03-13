@@ -8,7 +8,7 @@ class Paint(object):
     CLASS = 'triangle'
     DEFAULT_COLOR = 'white'
     BACKGROUND_COLOR = 'black'
-    PATH = './database_test/' + CLASS + '/'
+    PATH = './images/01_init/' + CLASS + '/'
     RESOLUTION = 128
     IMAGE_INDEX = 101
     IMAGE = Image.new('L', (RESOLUTION, RESOLUTION), BACKGROUND_COLOR)

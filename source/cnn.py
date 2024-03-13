@@ -24,7 +24,7 @@ TARGET1 = torch.empty(samples1 * classes, dtype = torch.int64)
 
 for n in range(classes):
     name = class_names[n]
-    PATH = './database_crop/' + name + '/'
+    PATH = './images/03_crop/' + name + '/'
     print("Extracting Files from Path : ", PATH)
     for index in range(samples0 + samples1):
         fileName = PATH + name + str(1 + index).rjust(4, '0')

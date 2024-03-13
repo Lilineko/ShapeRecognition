@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw
 
-CLASS = 'circle'
-PATH = './database/' + CLASS + '/'
+CLASS = 'triangle'
+PATH = './02_transform/' + CLASS + '/'
 BACKGROUND_COLOR = 'black'
 RESOLUTION = 128
 COUNT = 100

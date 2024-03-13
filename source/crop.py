@@ -11,8 +11,8 @@ classes = 3
 class_names = ['circle', 'triangle', 'square']
 
 for name in class_names:
-    READPATH = './database/' + name + '/'
-    WRITEPATH = './database_crop/' + name + '/' 
+    READPATH = './images/02_transform/' + name + '/'
+    WRITEPATH = './images/03_crop/' + name + '/' 
     images = [imread(READPATH + name + str(1 + index).rjust(4, '0') + '.png') for index in range(SAMPLES_PER_CLASS)]
     index = 0
     for img in images:
